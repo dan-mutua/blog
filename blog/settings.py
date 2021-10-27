@@ -126,14 +126,14 @@ WSGI_APPLICATION = 'turo.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'mutua',
-        'USER': 'developer',
-        'PASSWORD':'developerwilson'
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'mutua',
+#         'USER': 'developer',
+#         'PASSWORD':'developerwilson'
+#     }
+# }
 
 
 # Password validation
