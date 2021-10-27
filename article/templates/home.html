@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+
+
+ {% block content %}
+
+ 
+
+<div class="row align-center container inline-block " >
+   <p>welcome to maboto</p>
+   {% for post in object_list %}
+   <div class="card m-4" style="width: 300px;  " style="max-width: 18rem;">
+      <img src="{{ post.images.url}}" style="width: 300px; height: 300px;" >
+      <a href="{% url 'blog_detail' post.pk %}">{{ post.title }}</a>By- {{ post.author }}<br>
+      {{ post.body }}<br>
+      <a href="{% url 'updateb' post.pk %}">edit</a>
+      <a href="{% url 'deleteb' post.pk %}">delete</a>
+   </div>   
+
+
+   {% endfor %}   
+</div>
+
+
+{% endblock %}
