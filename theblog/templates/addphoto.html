@@ -3,7 +3,7 @@
 
 {% block content %}
 
-{% if user.is_authenticated %}
+}
   <p>Add Photo</p>
 
   <div class='form-group container'>
@@ -14,7 +14,5 @@
       <button class="btn btn-primary">add</button>
     </form>
   </div>
-{% else %}  
-Only the ADMIN can add to this page!!!(I thought you should know)
-{% endif %}
+
 {% endblock %}
