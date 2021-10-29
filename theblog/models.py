@@ -19,6 +19,7 @@ class Category(models.Model):
 
 
 class Post(models.Model):
+  
   title = models.CharField(max_length=200)
   author = models.ForeignKey(User, on_delete=models.CASCADE)
   category = models.CharField(max_length=200,default='supercar')
@@ -26,7 +27,7 @@ class Post(models.Model):
   body = models.TextField()
 
   def __str__(self):
-    return self.title + ' | ' + str(self.author)
+    return self.title 
 
   def get_absolute_url(self):
     return reverse('home')
