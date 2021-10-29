@@ -21,7 +21,7 @@ class Category(models.Model):
 class Post(models.Model):
   
   title = models.CharField(max_length=200)
-  author = models.ForeignKey(User, on_delete=models.CASCADE)
+  author = models.ForeignKey(User, on_delete=models.CASCADE, blank=True)
   category = models.CharField(max_length=200,default='supercar')
   images =  CloudinaryField( 'image', null=True, )
   body = models.TextField()
