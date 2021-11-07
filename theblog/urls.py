@@ -10,5 +10,5 @@ urlpatterns = [
   path('add_category/',AddCategory.as_view(), name='addcategory'),
   path('article/edit/<int:pk>', UpdateViewB.as_view(), name="updateb"),
   path('article/<int:pk>/delete',  DeleteViewB.as_view(), name="deleteb"),
-  path('search', views.search_blog,name='search_venues')
+  path('search', views.search_blog,name='search_blog')
 ]
