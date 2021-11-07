@@ -1,9 +1,14 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    
+    {% if searched %}
 
-<center>
-  <h1>Search results </h1>
-</center>
+    <center>
+      <h1>Search results {{searched}} </h1>
+    </center>
+
+    {% else %}
+    <P>this category does not exist </P>
 
 {% endblock %}
