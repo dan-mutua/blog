@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import ListView,DetailView,UpdateView,DeleteView,CreateView
-from .models import Post
+from .models import Category, Post
 from .forms import PostForm
 from django.urls import reverse_lazy
 
@@ -41,8 +41,9 @@ class DeleteViewB(DeleteView):
 def search_blog(request):
   if request.method=="POST":
      searched=request.POST['searched']
+     categories=Post.objects.filter(name__contains=searched)
 
-     return render (request, 'search.html',{'searched':searched}) 
+     return render (request, 'search.html',{'searched':searched, 'categories':categories}) 
 
   else:
       return render (request, 'search.html',{})    

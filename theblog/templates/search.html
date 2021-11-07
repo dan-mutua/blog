@@ -7,6 +7,10 @@
     <center>
       <h1>Search results {{searched}} </h1>
     </center>
+    {% for category in categories %}
+    {{ category }}
+
+    {% endfor %}
 
     {% else %}
     <P>this category does not exist...!!!! </P>

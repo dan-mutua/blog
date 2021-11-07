@@ -1,6 +1,7 @@
 from django.core.exceptions import ViewDoesNotExist
 from  django.urls import path
 from .views import AddCategory, Addp, HomePage,BlogD,UpdateViewB,DeleteViewB
+from . import views
 
 
 urlpatterns = [

@@ -45,7 +45,7 @@ class Post(models.Model):
   category = models.CharField(max_length=200,default='supercar')
   images =  CloudinaryField( 'image', null=True, )
   body = models.TextField()
-  location=models.ForeignKey(Location, on_delete=models.CASCADE)
+  location=models.ForeignKey(Location, on_delete=models.CASCADE, null=True)
 
 
   def __str__(self):
