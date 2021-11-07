@@ -40,8 +40,9 @@ class DeleteViewB(DeleteView):
 
 def search_blog(request):
   if request.method=="POST":
+     searched=request.POST['searched']
 
-     return render (request, 'search.html',{}) 
+     return render (request, 'search.html',{'searched':searched}) 
 
   else:
       return render (request, 'search.html',{})    
