@@ -14,6 +14,47 @@ This a web app This is a web app where you can view photos of different items, y
  * SQL
 
 ## Setup/Installation Requirements
+- Copy the github repository url
+- Clone to your computer
+- Open terminal and navigate to the directory of the project you just cloned to your computer
+- Run the following command to start the server using virtual environment
+
+```
+python3.8 -m venv --without-pip virtual
+```
+
+- To activate the virtual environment
+
+```
+source virtual/bin/activate
+```
+
+```
+curl https://bootstrap.pypa.io/get-pip.py | python
+```
+
+```
+pip install -r requirements.txt
+```
+
+- To copy .env.example to .env
+
+```
+cp .env.example .env
+```
+
+- Edit the .env file and replace the values with your own Cloudinary credentials and database credentials
+
+- To run the server
+
+```
+python manage.py runserver
+
+```
+
+
+- Open the browser and navigate to http://127.0.0.1:8000/ to see the application in action
+
 
 * Live link to view the project <a href="https://rocky-atoll-16631.herokuapp.com/">the blog</a>
 
