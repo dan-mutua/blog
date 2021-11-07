@@ -39,5 +39,9 @@ class DeleteViewB(DeleteView):
   success_url= reverse_lazy('home')
 
 def search_blog(request):
+  if request.method=="POST":
 
-  return render (request, 'search.html',{})  
+     return render (request, 'search.html',{}) 
+
+  else:
+      return render (request, 'search.html',{})    

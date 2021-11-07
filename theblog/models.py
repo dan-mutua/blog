@@ -15,6 +15,27 @@ class Category(models.Model):
   def get_absolute_url(self):
     return reverse('home')
 
+class Location(models.Model):
+    name = models.CharField(max_length=50, unique=True)
+
+    
+    def save_location(self):
+        self.save()
+
+    
+    def update_location(self, name):
+        self.name = name
+        self.save()
+
+    
+    def delete_location(self):
+        self.delete()
+
+    def __str__(self):
+        return self.name    
+
+
+
 
 
 
@@ -24,7 +45,7 @@ class Post(models.Model):
   category = models.CharField(max_length=200,default='supercar')
   images =  CloudinaryField( 'image', null=True, )
   body = models.TextField()
-  location=models.ForeignKey(to=title, on_delete=models.CASCADE)
+  location=models.ForeignKey(Location, on_delete=models.CASCADE)
 
 
   def __str__(self):
