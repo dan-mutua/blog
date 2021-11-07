@@ -37,3 +37,7 @@ class DeleteViewB(DeleteView):
   model = Post
   template_name= 'delete.html'
   success_url= reverse_lazy('home')
+
+def search_blog(request):
+
+  return render (request, 'search.html',{})  
