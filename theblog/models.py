@@ -25,6 +25,8 @@ class Post(models.Model):
   category = models.CharField(max_length=200,default='supercar')
   images =  CloudinaryField( 'image', null=True, )
   body = models.TextField()
+  location=models.ForeignKey()
+  
 
   def __str__(self):
     return self.title 

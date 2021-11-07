@@ -31,7 +31,7 @@ class AddCategory(CreateView):
 class UpdateViewB(UpdateView):
   model = Post
   template_name= 'update.html'
-  fields = ('title', 'author','body')
+  fields = ('title', 'author','body','location','category','image')
 
 class DeleteViewB(DeleteView):
   model = Post
